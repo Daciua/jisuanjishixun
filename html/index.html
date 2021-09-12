@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="#" href="../images/图片6.jpg">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url("../images/src=http___img.zcool.cn_community_013bdb59621024a8012193a34ed94d.jpg@2o.jpg&refer=http___img.zcool.jfif") no-repeat center;
+        }
+        
+        .rg-layout {
+            width: 900px;
+            height: 500px;
+            border: 5px solid #eeeeee;
+            ;
+            background-color: white;
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+        .rg-left {
+            float: left;
+            margin: 20px;
+        }
+        
+        .rg-center {
+            float: left;
+        }
+        
+        .rg-right {
+            float: right;
+            margin: 20px;
+        }
+        
+        .rg-left>p:first-child {
+            color: #ffd026;
+            font-size: 25px;
+        }
+        
+        #p1 {
+            color: #a6a6a6;
+            font-size: 25px;
+        }
+        
+        .rg-right p a {
+            color: #0000FF;
+            font-size: 10px;
+        }
+        
+        a:hover {
+            color: green;
+        }
+        
+        a:active {
+            color: green;
+        }
+        
+        a:visit {
+            color: red;
+        }
+        
+        .td-left {
+            width: 100px;
+            text-align: right;
+            line-height: 45px;
+        }
+        
+        .td-right {
+            padding-left: 50px;
+        }
+        
+        #username,
+        #password,
+        #emal,
+        #yourname,
+        #birthday,
+        #province,
+        #checkcode {
+            width: 251px;
+            height: 32px;
+            border: 1px solid #a6a6a6;
+            border-radius: 5px;
+            padding-left: 10px;
+        }
+        
+        #checkcode {
+            width: 110px;
+        }
+        
+        #img-check {
+            vertical-align: middle;
+            text-align: center;
+        }
+        
+        .img-check {
+            margin: 30px auto;
+        }
+        
+        #submit {
+            width: 150px;
+            height: 30px;
+            background-color: #E9DC51;
+            border: 5px solid #E9DC51;
+        }
+    </style>
+    <script>
+    </script>
+
+
+</head>
+
+<body>
+    <div class="rg-layout">
+        <div class="rg-left">
+            <p>新用户注册</p>
+            <p id="p1">USER REGISTER</p>
+        </div>
+        <div class="rg-center">
+            <div class="rg-form">
+                <form action="#" method="post">
+                    <table>
+
+                        <tr>
+                            <td class="td-left"><label for="username">用户名</label></td>
+                            <td class="td-right"><input type="text" placeholder="请输入用户名" id="username" name="username"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-left"><label for="password">密码</label></td>
+                            <td class="td-right"><input type="password" placeholder="请输入密码" name="password" id="password"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-left"><label for="emal">邮箱</label></td>
+                            <td class="td-right"><input placeholder="请输入邮箱" id="emal" type="email" name="emal"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-left"><label for="yourname">姓名</label></td>
+                            <td class="td-right"><input placeholder="请输入你的名字" id="yourname" type="text" name="yourname"></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-left"><label>性别</label></td>
+                            <td class="td-right"><input type="radio" value="mele" name="gender">男<input type="radio" value="female" name="gender">女</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-left"><label for="birthday">出生日期</label></td>
+                            <td class="td-right"><input type="date" name="birthday" id="birthday"></td>
+                        </tr>
+                        <tr>
+                            <td class="td-left"><label for="province">省份</label></td>
+                            <td class="td-right"><select name="province" id="province"><option>--请选择--</option><option>北京</option><option>上海</option><option>河北</option></select></td>
+                        </tr>
+                        <tr>
+                            <td class="td-left"><label for="checkcode">验证码</label></td>
+                            <td class="td-right"><input type="text" id="checkcode" name="checkcode"></td>
+                            <td class="img-check"><img id="img-check" src="../images/图片6.jpg" alt="验证码"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td align="center" colspan="2" align="center">
+                                <a href="./登录页面.html"><input type="submit" id="submit" value="注册"></a>
+                            </td>
+                        </tr>
+
+
+                    </table>
+                    <script>
+                    </script>
+                </form>
+            </div>
+        </div>
+        <!--点击登录直接进入旅游网站-->
+        <div class="rg-right">
+            <P>已有账号?<a href="../html/五秒后进入页面.html" target="_blank">登录</a></P>
+        </div>
+
+</body>
+
+</html>

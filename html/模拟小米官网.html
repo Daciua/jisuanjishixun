@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        alert("模拟的小米官网，用到的有h5、c3、JavaScript");
+    </script>
+    <title>仿小米官网</title>
+    <link rel="stylesheet" href="../css/留言板.css">
+    <link rel="stylesheet" href="../css/小米官网内部样式.css">
+    <link href="../images/小图标/loge.png">
+    <script src="../js/模拟小米官网.js"></script>
+    <style>
+        body {
+            background-color: #A9A9A9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            /*清除盒子默认格式重要必写*/
+        }
+        
+        li {
+            list-style: none;
+            /*清楚列表样式*/
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .nav {
+            width: 1226px;
+            height: 615px;
+            background-color: #A9A9A9;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .left {
+            width: 234px;
+            height: 615px;
+            background-color: purple;
+        }
+        
+        .right {
+            width: 992px;
+            height: 615px;
+            background-color: #A9A9A9;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
+        }
+        
+        .right li {
+            width: 234px;
+            height: 300px;
+            background-color: white;
+            position: relative;
+        }
+        
+        .up {
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            top: 15px;
+            left: 7px;
+        }
+        
+        .down {
+            position: absolute;
+            bottom: 10px;
+            width: 220px;
+            height: 60px;
+            left: 7px;
+            background-color: white;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .max3 {
+            width: 234px;
+            height: 615px;
+        }
+        
+        .box6 {
+            width: 1226px;
+            height: 680px;
+            background-color: #A9A9A9;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+        }
+        
+        .phone {
+            width: 1226px;
+            height: 14px;
+            position: absolute;
+        }
+        
+        .aleft {
+            float: left;
+            height: 40px;
+            padding: 5px;
+            color: white;
+        }
+        
+        .aright {
+            float: right;
+            height: 40px;
+            padding: 5px;
+        }
+        
+        .box1 {
+            background-color: #111122;
+            height: 30px;
+        }
+        
+        .nav2 {
+            width: 1226px;
+            height: 300px;
+            background-color: #A9A9A9;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+        }
+        
+        .left2 {
+            /*float: left;*/
+            width: 234px;
+            height: 300px;
+            background-color: #bbbbbb;
+            text-align: center;
+            color: white;
+        }
+        
+        .right2 {
+            /*float: right;*/
+            width: 992px;
+            height: 300px;
+            background-color: #A9A9A9;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: space-between;
+        }
+        
+        .right2 li {
+            width: 234px;
+            height: 300px;
+            background-color: white;
+            position: relative;
+        }
+        
+        .up2 {
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            top: 20px;
+            left: 33px;
+        }
+        
+        .down2 {
+            position: absolute;
+            bottom: 10px;
+            width: 220px;
+            height: 60px;
+            left: 7px;
+            background-color: white;
+            text-align: center;
+            font-size: 12px;
+        }
+        
+        .flash {
+            position: absolute;
+            top: 130px;
+            left: 108px;
+        }
+        
+        .box5 {
+            width: 1226px;
+            height: 370px;
+            background-color: #A9A9A9;
+            margin: auto;
+            display: flex;
+            justify-content: flex-start;
+            position: relative;
+        }
+        
+        .buy {
+            width: 1226px;
+            height: 14px;
+            position: absolute;
+        }
+        
+        .box7 {
+            width: 1226px;
+            height: 680px;
+            margin: auto;
+        }
+        
+        .G1 {
+            height: 125px;
+            width: 1278px;
+            margin: auto;
+        }
+        
+        .G2 {
+            height: 125px;
+            width: 1278px;
+            margin: auto;
+        }
+        
+        .book9 {
+            width: 60px;
+            height: 300px;
+            background-color: white;
+            position: fixed;
+            right: 0;
+            top: 26%;
+        }
+        
+        .book9 li {
+            margin: auto;
+        }
+        
+        .foot3-2 img {
+            width: 85px;
+            height: 28px;
+        }
+        
+        .zbox-up {
+            position: absolute;
+            bottom: 140px;
+            left: 70px;
+        }
+        
+        .zbox-down {
+            position: absolute;
+            bottom: 70px;
+            left: 42px;
+        }
+        
+        .zbox1 {
+            background-color: #333333;
+            width: 40px;
+            height: 40px;
+            line-height: 230%;
+        }
+        
+        .zbox2 {
+            background-color: #333333;
+            width: 40px;
+            height: 40px;
+            line-height: 230%;
+        }
+        
+        .zbox3 {
+            background-color: #333333;
+            width: 40px;
+            height: 40px;
+            line-height: 230%;
+        }
+        
+        .box1-1 {
+            line-height: 230%;
+            text-align: center;
+        }
+        
+        .box2-1 {
+            line-height: 230%;
+        }
+        
+        .zbox {
+            font-size: 23px;
+            color: red;
+            position: absolute;
+            top: 70px;
+            left: 83px;
+        }
+        
+        .current {
+            background-color: rgb(122, 95, 101);
+            color: #fff;
+        }
+        
+        .navspan {
+            position: relative;
+        }
+        
+        .navspan>span>div {
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 215px;
+            width: 992px;
+            height: 460px;
+            border-left: 1px solid #0a0a09;
+            border-right: 1px solid #fecc5B;
+            background-color: rgb(250, 250, 250, .8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <ul class="box1">
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">小米商城    |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">MIUI   |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">IOT   |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">云服务   |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">金融   |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">有品   |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">小爱开放平台  |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">政企服务   |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">下载app    |</a></li>
+            <li class="aleft"><a href="" style="color:white; font-size: 10px;">Select Region</a></li>
+            <li class="aright"><a href="" style="color:white;font-size: 10px;">登录</a></li>
+            <li class="aright"><a href="" style="color:white;font-size: 10px;">注册</a></li>
+            <li class="aright"><a href="" style="color:white;font-size: 10px;">消息通知</a></li>
+        </ul>
+        <div class="box2">
+            <ul class="uleft"><img src="../images/logo-footer.png" alt=""></ul>
+            <li class="ucenter"><a href="">小米手机</a></li>
+            <li class="ucenter"><a href="">红米</a></li>
+            <li class="ucenter"><a href="">电视</a> </li>
+            <li class="ucenter"><a href="">笔记本</a></li>
+            <li class="ucenter"><a href="">空调</a></li>
+            <li class="ucenter"><a href="">新品</a></li>
+            <li class="ucenter"><a href="">路由器</a></li>
+            <li class="ucenter"><a href="">智能硬件</a></li>
+            <li class="ucenter"><a href="">服务</a></li>
+            <li class="ucenter"><a href="">社区</a></li>
+            <ul><input type="text" placeholder="请输入搜索内容" style="height:60px;width:250px; "><button style="width: 80px;height: 60px;">搜索</button></ul>
+
+        </div>
+        <div class="box3">
+
+            <div class="banner">
+
+                <!-- 轮播图片 -->
+                <div class="bannerImg">
+                    <ul>
+                        <li class="on">
+                            <img src="../images/01a5d7313fe344bddb9e4081df4dc998.jpg" width="1226" height="460" />
+                        </li>
+                        <li>
+                            <img src="../images/918820682e4a490221cfd92b24c14b86.webp" width="1226" height="460" />
+                        </li>
+                        <li>
+                            <img src="../images/a532e33470d046b3f044d5ea49fc5e9e.webp" width="1226" height="460" />
+                        </li>
+                        <li>
+                            <img src="../images/ecaeb8a426aed1f6ab1f15c589c8cb30.webp" width="1226" height="460" />
+                        </li>
+                        <li>
+                            <img src="../images/xmad_1542593050318_TVIrS.png2.png" width="1226" height="460" />
+                        </li>
+                    </ul>
+                </div>
+                <!-- 上一张 -->
+                <div class="left55">
+                </div>
+                <!-- 下一张 -->
+                <div class="right55"></div>
+                <!-- 小按钮 -->
+                <div class="dian">
+                    <ul>
+                        <li class="items on" onclick="buttonClick(0)"></li>
+                        <li class="items" onclick="buttonClick(1)"></li>
+                        <li class="items" onclick="buttonClick(2)"></li>
+                        <li class="items" onclick="buttonClick(3)"></li>
+                        <li class="items" onclick="buttonClick(4)"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subnav">
+                <ul class="navspan">
+                    <span> 
+                       <li class="subnavson"><a href="">手机 电话卡<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">电视 盒子<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">笔记本 平板<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">家电 插线板<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">出行 穿戴<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">智能 路由器<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">电源 配件<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">健康 儿童<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">耳机 音响<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+                    <span>
+                        <li class="subnavson"><a href="">生活 箱包<span>></span></a>
+                    </li>
+                    <div>
+                        <ul>
+                            <!-- <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li>
+                            <li>小米手机</li> -->
+                        </ul>
+                    </div>
+                    </span>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="box4">
+            <div class="a1">
+                <div class="b1">选购手机</div>
+                <div class="b1">企业团购</div>
+                <div class="b1">F码通道</div>
+                <div class="b1">米粉卡</div>
+                <div class="b1">以旧换新</div>
+                <div class="b1">话费充值</div>
+            </div>
+            <div><img src="../images/xmad_15373422669527_eTZiJ.png2.png" alt=""></div>
+            <div><img src="../images/xmad_15381015124677_QcEGp.jpg2.jpg" alt=""></div>
+            <div><img src="../images/xmad_15410029988871_TdzPQ.png2.png" alt=""></div>
+        </div>
+        <div class="box5">
+            <h3 class="buy">小米闪购</h3>
+            <div class="nav2">
+                <div class="left2">
+                    <div class="zbox">10:00场</div>
+                    <img class="flash" src="../images/flashpurchase.png" alt="">
+                    <div class="zbox-up">距离结束还有</div>
+                    <div class="zbox-down" style="display: flex;justify-content: center">
+                        <li class="zbox1">01</li>
+                        <li class="box1-1">：</li>
+                        <li class="zbox2">01</li>
+                        <li class="box2-1">：</li>
+                        <li class="zbox3">29</li>
+                    </div>
+
+                </div>
+                <ul class="right2">
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up2">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/抢购图片1.png2.png" alt=""></a>
+                        </div>
+                        <div class="down2">小米小钢炮蓝牙音响2 白色 <br>精简设计 专业喇叭
+                            <br><a href="" style="color: red">9.9元</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="lite1">五折秒杀</div>
+                        <div class="up2">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/抢购图片2.png" alt=""></a>
+                        </div>
+                        <div class="down2">小米移动电源2 5000mah版 <br>锂聚合物电芯 轻巧便捷
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">1元秒杀</div>
+                        <div class="up2">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/抢购图片3.png2.png" alt=""></a>
+                        </div>
+                        <div class="down2">小米游戏耳机 黑色 <br>7.1虚拟环绕立体引擎
+                            <br><a href="" style="color: red">174.5元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">立减250</div>
+                        <div class="up2">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/抢购图片4.jpg2.jpg" alt=""></a>
+                        </div>
+                        <div class="down2">红米note5 玫瑰金 3GB+32GB <br>1.4um大像素 AI双摄
+                            <br><a href="" style="color: red">849元</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="G1">
+            <a href="./仿京东放大镜案例.html"><img src="../images/广告.png2.png" alt=""></a>
+        </div>
+        <div class="box6">
+            <h3 class="phone">手机</h3>
+            <div class="nav">
+                <div class="left">
+                    <a href="./仿京东放大镜案例.html"> <img class="max3" src="../images/小米max3.jpg" alt=""></a>
+
+                </div>
+                <ul class="right">
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone1.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元<a>
+                </div></li>
+                <li><div class="lite1">9.9元秒杀</div><div class="up"><a href="./仿京东放大镜案例.html"></a><img src="../images/phone2.png" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone3.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone4.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone5.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone6.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone7.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                    <li>
+                        <div class="lite1">9.9元秒杀</div>
+                        <div class="up">
+                            <a href="./仿京东放大镜案例.html"><img src="../images/phone8.jpg" alt=""></a>
+                        </div>
+                        <div class="down">小米8 青春版 4GB+64GB <br>潮流镜面设计 2400万自拍
+                            <br><a href="" style="color: red">1339元</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="G2"><img src="../images/xmad_15421601390247_IARnQ.jpg2.jpg" alt=""></div>
+        <div class="box7">
+            <div class="up3">
+                <h3>家电</h3>
+            </div>
+            <ul class="down3">
+                <li>
+                    <a href="./仿京东放大镜案例.html"></a><img src="../images/家电广告1.png" alt=""></li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/电脑图片4.jpg" alt=""></a>
+                    </div>
+                    <div class="down4">15.6Pro i5 8G 1050MAX-Q 255G<br><a href="" style="color: red">6299元</a></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/电脑图片2.jpg" alt=""></a>
+                    </div>
+                    <div class="down4">13.3"小米笔记本Air 四核i7 8G 256G<br><a href="" style="color: red">5999元</a></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/电脑图片3.png" alt=""></a>
+                    </div>
+                    <div class="down4">小米游戏本15.6" 8代i7 16G1TB<br><a href="" style="color: red">8999元</a></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/电脑图片4.jpg" alt=""></a>
+                    </div>
+                    <div class="down4">13.3"小米笔记本Air 四核i7 8G 256G<br><a href="" style="color: red">5999元</a></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/家电广告2.jpg" alt=""></a>
+                    </div>
+                    <div class="down4"></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/鼠标1.png" alt=""></a>
+                    </div>
+                    <div class="down4">小米无线鼠标<br>耐脏亲肤涂层，人体工学设计<br><a href="" style="color: red">69元</a></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/鼠标2.jpg" alt=""></a>
+                    </div>
+                    <div class="down4">小米便携鼠标<br>轻薄便携，铝合金外壳+ABS材质<br><a href="" style="color: red">99元</a></div>
+                </li>
+                <li>
+                    <div class="up4">
+                        <a href="./仿京东放大镜案例.html"><img src="../images/键盘1.png" alt=""></a>
+                    </div>
+                    <div class="down4">锐米机械键盘<br>铝合金机身，TTC鸿洲，87键<br><a href="" style="color: red">289元</a></div>
+                </li>
+
+                <div class="up55">
+                    <div class="up5">
+                        <div class="up5-1" style="font-size: 18px">小米净化器<br><a style="color: red">100元</a></div><img src="../images/小米净水器.jpg" alt=""></div>
+                    <div class="down5">
+                        <div style="text-align: center;width: 133px">浏览更多<br><a style="font-size: 10px">热门</a></div>
+                        <img src="../images/前往.png" alt="" style="width: 61px;height: 59px;margin: auto;padding-right: 20px"></div>
+                </div>
+            </ul>
+        </div>
+
+
+        <ul class="book9">
+            <li>
+                <a href=""><img src="../images/手机app.png" alt="我在这里"></a>
+            </li>
+            <li>
+                <a href=""><img src="../images/个人中心.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../images/联系客服.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../images/购物车.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../images/回顶部.png" alt=""></a>
+            </li>
+        </ul>
+        <div class="box10">
+            <a href="./简单版留言板案例.html"><button style="width:1226px;height: 100px;" class="button3">前往留言区</button></a>
+        </div>
+
+
+        <div class="foot">
+            <div class="foot1">
+                <ul class="foot1-1">
+                    <li><a href="" style="color: white">预约维修服务</a></li>
+                    <li><a href="" style="color: white">七天无理由退货</a></li>
+                    <li><a href="" style="color: white">15天免费换货</a></li>
+                    <li><a href="" style="color: white">满150包邮</a></li>
+                    <li><a href="" style="color: white">520余家售后网点</a></li>
+                </ul>
+            </div>
+            <div class="foot2">
+                <dl class="foot2-2">
+                    <dt><a href=""style="color: white">帮助中心</a></dt>
+                    <dd><a href="" style="color: white">账户管理</a></dd>
+                    <dd><a href="" style="color: white">购物指南</a></dd>
+                    <dd><a href="" style="color: white">订单操作</a></dd>
+                </dl>
+                <dl class="foot2-2">
+                    <dt><a href=""style="color: white">服务支持</a></dt>
+                    <dd><a href="" style="color: white">售后政策</a></dd>
+                    <dd><a href="" style="color: white">自助服务</a></dd>
+                    <dd><a href="" style="color: white">相关下载</a></dd>
+                </dl>
+                <dl class="foot2-2">
+                    <dt><a href=""style="color: white">线下门店</a></dt>
+                    <dd><a href="" style="color: white">小米之家</a></dd>
+                    <dd><a href="" style="color: white">服务网点</a></dd>
+                    <dd><a href="" style="color: white">授权体验店</a></dd>
+                </dl>
+                <dl class="foot2-2">
+                    <dt><a href=""style="color: white">关于小米</a></dt>
+                    <dd><a href="" style="color: white">了解小米</a></dd>
+                    <dd><a href="" style="color: white">加入小米</a></dd>
+                    <dd><a href="" style="color: white">投资者关系</a></dd>
+                    <dd><a href="" style="color: white">企业社会责任</a></dd>
+                    <dd><a href="" style="color: white">廉洁举报</a></dd>
+                </dl>
+                <dl class="foot2-2">
+                    <dt><a href=""style="color: white">关注我们</a></dt>
+                    <dd><a href="" style="color: white">新浪微博</a></dd>
+                    <dd><a href="" style="color: white">官方微信</a></dd>
+                    <dd><a href="" style="color: white">联系我们</a></dd>
+                    <dd><a href="" style="color: white">公益基金会</a></dd>
+
+                </dl>
+                <dl class="foot2-2">
+                    <dt><a href=""style="color: white">特色服务</a></dt>
+                    <dd><a href="" style="color: white">F 码通道</a></dd>
+                    <dd><a href="" style="color: white">礼物码</a></dd>
+                    <dd><a href="" style="color: white">防伪查询</a></dd>
+
+                </dl>
+                <div class="foot2-2-right">
+                    <p class="telephone" style="color: red">400-100-5678</p>
+                    <p>8:00-18:00(仅收市话费)</p><a href=""><button style="background-color: #E9DC51;border:none; width: 80px;height: 30px;">人工客服</button></a></div>
+            </div>
+
+            <div class="foot3">
+                <div>
+                    <div class="loge-left"><img src="../images/logo-footer.png" alt=""></div>
+                    <div class="loge-right">
+                        <p>小米商城 | MIUI | 米家 | 米聊 | 多看 | 游戏 | 政企服务 | 小米天猫店 | 小米集团隐私政策 | 小米公司儿童信息保护规则 | 小米商城隐私政策 | 小米商城用户协议 | 问题反馈 | Select Location</p>
+                        <p>© mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2020]0276-042号</p>
+                        <p>（京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京)-非经营性-2014-0090 营业执照 医疗器械质量公告</p>
+                        <p>违法和不良信息举报电话：171-5104-4404 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                    </div>
+                </div>
+
+                <div class="foot3-2">
+                    <img src="../images/truste.png" alt=""><img src="../images/ba10428a4f9495ac310fd0b5e0cf8370.png" alt=""><img src="images/v-logo-1.png" alt="">
+                    <img src="../images/v-logo-2.png" alt=""><img src="../images/v-logo-3.png" alt="">
+                </div>
+
+
+                <div class="foot3-3">
+                    <h1 style="font-weight: normal ;color: #333333">探索黑科技 小米为发烧而生</h1>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

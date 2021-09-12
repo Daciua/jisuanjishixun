@@ -1,0 +1,20 @@
+.message>li {
+    width: 300px;
+    padding: 5px;
+    background-color: rgb(245, 209, 243);
+    color: red;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.message>li>a {
+    float: right;
+}
+
+textarea {
+    width: 1400px;
+    height: 100px;
+    border: 1px solid pink;
+    outline: none;
+    resize: none;
+}

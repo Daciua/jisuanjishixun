@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简单版留言版案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: url(../images/16pic_3432732_b.jpg) no-repeat;
+            background-size: 1536px;
+        }
+        
+        .massage {
+            position: relative;
+            width: 1200px;
+            height: 102px;
+        }
+        
+        button {
+            float: right;
+            position: absolute;
+            top: 1px;
+            left: 1101.6px;
+            width: 200px;
+            height: 100px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        textarea {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            width: 1000px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        
+        ul {
+            margin-top: 50px;
+        }
+        
+        li {
+            width: 1000px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        
+        li a {
+            float: right;
+        }
+        
+        .box1 {
+            color: aliceblue;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .box2 {
+            width: 1000px;
+            height: 600px;
+            position: absolute;
+            left: 103px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <b><h1>小米官方论坛留言区</h1></b>
+    </div>
+    <div class="massage">
+        <textarea name="" id=""></textarea>
+        <button>发布</button>
+    </div>
+    <div class="box2">
+        <ul>
+        </ul>
+    </div>
+
+
+
+
+    <script>
+        //1.获取元素
+        var but = document.querySelector('button');
+        var text = document.querySelector('textarea');
+        var ul = document.querySelector('ul');
+        //2.注册事件
+        but.onclick = function() {
+            if (text.value == '') {
+                alert('请输入内容');
+                return false;
+            } else {
+                var li = document.createElement('li');
+                li.innerHTML = text.value + "<a herf = 'javascript:;'>删除</a>"; //阻止链接跳转用javascript:void(0);或Javascript:;
+                ul.insertBefore(li, ul.children[0]);
+                //删除元素
+                var a = document.querySelectorAll('a');
+                for (var i = 0; i < a.length; i++) { //循环给a绑定事件
+                    a[i].onclick = function() {
+                        ul.removeChild(this.parentNode); //要删除的是li  所以用this.parentNode   那此时的父级为ul     node.removechild(child)
+                    }
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五秒钟跳转页面</title>
+    <style>
+        body {
+            background-image: url(../images/section-video_01.jpg);
+        }
+        
+        button {
+            width: 1500px;
+            height: 150px;
+            background-color: aqua;
+            color: rgb(0, 0, 0);
+            border: cyan solid;
+            font-size: 50px;
+        }
+        
+        .div1 {
+            position: absolute;
+            left: 36%;
+            top: 103%;
+            color: aqua;
+            font-size: 50px;
+        }
+        
+        .vedio {
+            width: 1500px;
+            height: 900px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -250px;
+            margin-left: -500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vedio1">
+        <video poster="../images/video_show.mp4" class="li_video" style="width: 1500px; ; height: 900px;" controls="true" class="vedio1"> 
+            <!--             @click="bofang"   :controls="test12"-->
+            <source src="../images/881149fdcc853e4a242ff93d2119b0e1.mp4" type="video/mp4" class="vedio1">
+            </video>
+
+    </div>
+    <div>
+        <button>单击进入官网</button>
+        <div class="div1"></div>
+    </div>
+
+    <script>
+        var btn = document.querySelector('button');
+        var div1 = document.querySelector('.div1');
+        var time = 5;
+        btn.addEventListener('click', function() {
+            fn(); //先调用一次这个函数 防止第一次刷新页面有空白
+            setInterval(fn, 1000); //1000毫秒，每一秒钟调用一次函数
+            function fn() {
+                if (time == 0) {
+                    location.href = './模拟小米官网.html';
+                } else {
+                    div1.innerHTML = '将在' + time + '秒后跳转页面';
+                    time--;
+                }
+            };
+        })
+        var videos = document.getElementsByTagName('video'); //点击另外一个视频当前会暂停
+        for (var i = videos.length - 1; i >= 0; i--) {
+            (function() {
+                var p = i;
+                videos[p].addEventListener('play', function() {
+                    pauseAll(p);
+                })
+            })()
+        }
+    </script>
+</body>
+
+</html>
